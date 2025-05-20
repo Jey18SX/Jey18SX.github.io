@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen Extendido: Definición y Criterios Diagnósticos de la Obesidad Clínica</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: #1abc9c 3px solid;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.3em;
+        }
+        header p {
+            font-size: 1.1em;
+        }
+        nav {
+            background: #34495e;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            padding: 0;
+            list-style: none;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+        nav a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+            color: #fff;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background-color: #fdfdfd;
+            border-left: 5px solid #1abc9c;
+            border-radius: 0 8px 8px 0;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        h3 {
+            color: #34495e;
+            font-size: 1.4em;
+            margin-top: 25px;
+        }
+        h4 {
+            color: #2980b9;
+            font-size: 1.2em;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+            font-size: 0.95em;
+        }
+        th {
+            background-color: #1abc9c;
+            color: white;
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f7f9f9;
+        }
+        tr:hover {
+            background-color: #eafaf1;
+        }
+        .diagram-container {
+            border: 2px solid #2980b9;
+            padding: 20px;
+            margin: 25px auto;
+            background-color: #f0f8ff;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .diagram-container h4 {
+            margin-top: 0;
+            color: #2980b9;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+        .diagram-box {
+            border: 1px solid #7f8c8d;
+            background-color: #ffffff;
+            padding: 10px 15px;
+            margin: 10px auto;
+            border-radius: 6px;
+            display: inline-block;
+            min-width: 180px; /* Aumentado */
+            max-width: 90%; /* Para mejor ajuste */
+            text-align: left;
+            vertical-align: top;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .diagram-box strong {
+            color: #c0392b;
+        }
+        .diagram-arrow {
+            font-size: 1.8em; /* Ajustado */
+            color: #2980b9;
+            margin: 8px 12px; /* Ajustado */
+            display: block;
+        }
+        .flow-item {
+            background-color: #ecf0f1;
+            border: 1px solid #bdc3c7;
+            padding: 20px; /* Aumentado */
+            margin-bottom: 20px; /* Aumentado */
+            border-radius: 5px;
+            position: relative;
+            padding-left: 40px; /* Espacio para el ícono */
+        }
+        .flow-item::before {
+            content: '➡️'; /* Flecha más estilizada */
+            color: #1abc9c;
+            font-size: 1.8em; /* Aumentado */
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+         .flow-item ol, .flow-item ul {
+            padding-left: 25px; /* Aumentado */
+        }
+
+        ul.custom-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        ul.custom-list li {
+            padding-left: 2.2em; /* Ajustado */
+            text-indent: -2.2em;
+            margin-bottom: 12px; /* Aumentado */
+            position: relative;
+        }
+        ul.custom-list li::before {
+            /* content: "🔬";  Ícono por defecto */
+            color: #1abc9c;
+            margin-right: 0.7em;
+            font-weight: bold;
+            font-size: 1.3em; /* Aumentado */
+            position: absolute;
+            left: 0;
+            top: 1px; /* Ajustado */
+        }
+        .executive-summary-box {
+            background-color: #e8f6f3;
+            border: 1px solid #a3e4d7;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .executive-summary-box ul.custom-list li::before {
+             content: "⭐";
+        }
+        .recommendation-list li::before {
+            content: "💡";
+        }
+        .stigma-list li::before {
+            content: "⚠️";
+        }
+        .problem-list li::before {
+            content: "❗";
+        }
+        .definition-list li::before {
+            content: "📖";
+        }
+        .pathophysiology-point li::before {
+            content: "⚙️";
+        }
+        .management-point li::before {
+            content: "✚";
+        }
+
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            margin-top: 30px;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 95%;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            header p {
+                font-size: 1em;
+            }
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            h3 {
+                font-size: 1.2em;
+            }
+            .diagram-box {
+                display: block;
+                width: 90%;
+            }
+            .diagram-arrow {
+                 margin: 5px 0;
+            }
+            .flow-item::before {
+                left: 5px;
+                top: 15px;
+            }
+             .flow-item {
+                padding-left: 35px;
+             }
+            ul.custom-list li {
+                padding-left: 2.5em;
+                text-indent: -2.5em;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Comisión de The Lancet Diabetes & Endocrinology</h1>
+        <p>Definición y Criterios Diagnósticos de la Obesidad Clínica</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#resumen-ejecutivo">Resumen Ejecutivo</a></li>
+            <li><a href="#introduccion">Introducción</a></li>
+            <li><a href="#definiciones">Nuevas Definiciones</a></li>
+            <li><a href="#diagnostico">Criterios Diagnósticos</a></li>
+            <li><a href="#fisiopatologia">Fisiopatología</a></li>
+            <li><a href="#manejo">Manejo</a></li>
+            <li><a href="#estigma">Estigma</a></li>
+            <li><a href="#recomendaciones">Recomendaciones</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="resumen-ejecutivo">
+            <h2>📊 Resumen Ejecutivo</h2>
+            <div class="executive-summary-box">
+                <p>Las mediciones de obesidad actuales, predominantemente basadas en el Índice de Masa Corporal (IMC), resultan insuficientes para una evaluación precisa de la salud a nivel individual. Estas pueden tanto subestimar como sobreestimar la adiposidad real y no proporcionan información detallada sobre el estado de salud general. Esta Comisión introduce y define el concepto de <strong>obesidad clínica</strong> como una condición de enfermedad que surge directamente del exceso de adiposidad, la cual impacta negativamente la función de diversos órganos y tejidos del cuerpo. El propósito fundamental de la Comisión fue establecer criterios diagnósticos objetivos y clínicamente relevantes.</p>
+                <p><strong>Definiciones Clave Propuestas:</strong></p>
+                <ul class="custom-list">
+                    <li><strong>Obesidad (General):</strong> Una condición médica crónica caracterizada por una acumulación excesiva de grasa corporal (adiposidad), que puede o no estar acompañada de una distribución o función anormal del tejido adiposo.</li>
+                    <li><strong>Obesidad Clínica:</strong> Se define como una enfermedad crónica y sistémica que se distingue por alteraciones significativas en la función de los tejidos, los órganos, o el individuo en su totalidad, como consecuencia directa del exceso de adiposidad. Esta condición puede progresar hasta causar daño orgánico severo y potencialmente mortal.</li>
+                    <li><strong>Obesidad Preclínica:</strong> Un estado caracterizado por exceso de adiposidad donde, sin embargo, la función de otros tejidos y órganos principales se mantiene preservada. No obstante, este estado conlleva un riesgo incrementado de desarrollar obesidad clínica y otras enfermedades no transmisibles (ENT) asociadas.</li>
+                </ul>
+                <p><strong>Recomendaciones Claves de la Comisión:</strong></p>
+                <ul class="custom-list">
+                    <li>El IMC debe reservarse para el cribado a nivel poblacional y estudios epidemiológicos, y no como herramienta única para la evaluación de la salud individual.</li>
+                    <li>El exceso de adiposidad debe ser confirmado mediante métodos directos de medición de grasa corporal (ej. DEXA) o, en su defecto, mediante criterios antropométricos adicionales (ej. circunferencia de cintura, relación cintura-estatura) que complementen al IMC. Una excepción es en casos de IMC muy elevado (>40 kg/m²), donde el exceso de adiposidad puede asumirse pragmáticamente.</li>
+                    <li>El diagnóstico de la obesidad clínica se basa en dos pilares principales:
+                        <ol>
+                            <li>Evidencia objetiva de una función reducida de órganos o tejidos atribuible directamente a la obesidad.</li>
+                            <li>Limitaciones sustanciales y ajustadas por edad en las actividades de la vida diaria, que reflejen el impacto específico de la obesidad sobre la funcionalidad del individuo.</li>
+                        </ol>
+                    </li>
+                    <li>Las personas diagnosticadas con obesidad clínica requieren acceso oportuno a tratamientos integrales y basados en la evidencia científica.</li>
+                    <li>Individuos con obesidad preclínica deben recibir asesoramiento en salud, monitorización continua de su estado y estrategias preventivas.</li>
+                    <li>Es imperativo que los responsables de la formulación de políticas de salud garanticen un acceso equitativo a los tratamientos disponibles y aborden de manera proactiva el sesgo y el estigma asociados al peso.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="introduccion">
+            <h2>❓ Introducción: El Problema con los Enfoques Actuales y la Necesidad de un Nuevo Paradigma</h2>
+            <p>La Organización Mundial de la Salud (OMS) reconoce la obesidad como una enfermedad crónica compleja (código CIE-11: 5B81). No obstante, su conceptualización como una entidad patológica independiente, y no meramente como un factor de riesgo, sigue siendo objeto de un intenso debate tanto en la comunidad médica como en la sociedad en general. Las definiciones actuales, que se apoyan de forma casi exclusiva en el Índice de Masa Corporal (IMC), enfrentan críticas sustanciales y bien fundamentadas:</p>
+            <ul class="custom-list problem-list">
+                <li><strong>Limitaciones del IMC:</strong> El IMC es una medida indirecta de la adiposidad que no distingue entre masa grasa y masa magra (músculo, hueso), ni proporciona información sobre la distribución de la grasa corporal, un factor crucial para determinar el riesgo metabólico.</li>
+                <li><strong>Riesgo de Sobrediagnóstico:</strong> Un número significativo de individuos clasificados con obesidad según el IMC (especialmente en las categorías más leves) no presentan signos evidentes de enfermedad activa o disfunción metabólica, un fenómeno a veces denominado "obesidad metabólicamente sana". Esto plantea el riesgo de etiquetar innecesariamente a personas sanas como enfermas.</li>
+                <li><strong>Riesgo de Subdiagnóstico:</strong> Por el contrario, personas con un IMC dentro del rango "normal" pueden albergar un exceso de adiposidad visceral o ectópica, con los consiguientes riesgos para la salud que pasarían desapercibidos si solo se considera el IMC.</li>
+                <li><strong>Obesidad como "Factor de Riesgo":</strong> Tradicionalmente, la obesidad ha sido enmarcada como un precursor o un factor de riesgo para el desarrollo de otras enfermedades (diabetes tipo 2, enfermedades cardiovasculares, ciertos tipos de cáncer), en lugar de ser considerada una condición que, por sí misma, puede causar directamente un estado de enfermedad. El tratamiento a menudo se supedita a la presencia de estas "comorbilidades".</li>
+            </ul>
+            <p>La Comisión argumenta de forma contundente que el exceso de adiposidad, a través de mecanismos fisiopatológicos directos, puede inducir disfunción en múltiples órganos y tejidos, generando un estado de enfermedad identificable. Por lo tanto, existe una necesidad apremiante de definir esta entidad patológica (denominada por la Comisión como <strong>obesidad clínica</strong>) para establecer una base sólida que guíe el diagnóstico preciso, el tratamiento efectivo y la formulación de políticas de salud pública coherentes. Este nuevo marco también busca diferenciar claramente la enfermedad establecida de un estado de riesgo elevado (denominado <strong>obesidad preclínica</strong>).</p>
+            <div class="diagram-container">
+                <h4>🖼️ Concepto Figura 1: La Enfermedad como Pieza Faltante en el Enfoque Tradicional</h4>
+                <div class="diagram-box"><strong>Marco Tradicional de la Obesidad:</strong><br>Causa (Exceso Adiposidad) ➔ Considerada como Factor de Riesgo ➔ Conduce a "Enfermedades Relacionadas" (Ej: Diabetes, Cáncer, ECV)</div>
+                <div class="diagram-arrow">⇩ (Este marco no define adecuadamente la enfermedad intrínseca causada por la obesidad en sí) ⇩</div>
+                <div class="diagram-box"><strong>Marco Propuesto por la Comisión:</strong><br>Exceso de Adiposidad (Etiología Primaria)<br>
+                    <span class="diagram-arrow">↓</span>
+                    Mecanismos Fisiopatológicos Directos (Mecánicos, Endocrinos, Metabólicos, Inflamatorios)<br>
+                    <span class="diagram-arrow">↓</span>
+                    Compromiso y Disfunción de Órganos/Tejidos<br>
+                    <span class="diagram-arrow">↓</span>
+                    Manifestaciones Clínicas Específicas <strong>(Definiendo la Obesidad Clínica como Enfermedad)</strong>
+                </div>
+            </div>
+        </section>
+
+        <section id="definiciones">
+             <h2>📘 Nuevas Definiciones Conceptuales: Un Marco Diferenciado</h2>
+            <p>La Comisión establece un nuevo marco conceptual que busca diferenciar con mayor precisión los diversos estados de salud y enfermedad asociados al exceso de adiposidad. Esta diferenciación no es meramente académica, sino que tiene implicaciones pragmáticas cruciales para la práctica clínica y la formulación de políticas sanitarias.</p>
+            <ul class="custom-list definition-list">
+                <li>La <strong>adiposidad excesiva</strong> es la característica fundamental de la obesidad.</li>
+                <li>La <strong>función anormal del tejido adiposo</strong> (ej. inflamación, resistencia a la insulina en los adipocitos) y la <strong>distribución anormal de la grasa</strong> (ej. acumulación visceral o ectópica) pueden ser parte de la obesidad y son importantes para determinar el impacto en la salud, pero la obesidad (exceso de grasa) puede existir incluso con función y distribución relativamente normales del tejido adiposo.</li>
+            </ul>
+            <h3>Definiciones Clave Detalladas (Basadas en Tabla 1, Página 6 del artículo original)</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Término</th>
+                        <th>Definición Detallada por la Comisión</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Obesidad (General)</strong></td>
+                        <td>Una condición médica crónica caracterizada por una acumulación excesiva de tejido adiposo (grasa corporal) en el organismo, que puede o no estar acompañada de una distribución atípica de esta grasa o de una alteración en la función intrínseca del propio tejido adiposo. Sus causas son complejas, multifactoriales (genéticas, ambientales, psicológicas, socioeconómicas) y aún no se comprenden en su totalidad.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Obesidad Clínica</strong></td>
+                        <td>Una enfermedad crónica, progresiva y sistémica que se manifiesta por alteraciones detectables y significativas en la estructura o función de diversos tejidos, órganos, o del organismo en su conjunto, como resultado directo del exceso de adiposidad y/o de una función o distribución anormal de la grasa corporal. Esta condición puede causar enfermedad sistémica independientemente de la presencia de otras patologías médicas y, si no se maneja adecuadamente, puede llevar a complicaciones graves y daño orgánico irreversible.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Obesidad Preclínica</strong></td>
+                        <td>Un estado fenotípico caracterizado por la presencia de un exceso de adiposidad confirmado, pero en el cual la función de los principales órganos y tejidos (aparte del tejido adiposo en sí) se mantiene sustancialmente preservada, sin evidencia actual de enfermedad clínicamente manifiesta causada por la obesidad. Sin embargo, este estado confiere un riesgo incrementado y variable de progresar hacia la obesidad clínica y de desarrollar otras enfermedades no transmisibles (ENT) asociadas. También puede representar una fase de remisión de una obesidad clínica previa.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Remisión de la Obesidad Clínica</strong></td>
+                        <td>La resolución parcial o completa, mantenida en el tiempo (al menos 6 meses según el artículo para otras enfermedades), de los signos, síntomas y evidencias de laboratorio de la disfunción tisular u orgánica que estaban previamente asociadas a la obesidad clínica. Es importante destacar que la remisión no implica una cura definitiva de la propensión subyacente a la obesidad.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Comorbilidades (en el contexto de la obesidad)</strong></td>
+                        <td>Se refiere estrictamente a aquellas enfermedades o condiciones médicas que coexisten de manera incidental con la obesidad en un individuo, pero para las cuales no existe una relación causal directa o una superposición fisiopatológica significativa claramente establecida con el exceso de adiposidad.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Enfermedades/trastornos relacionados con la obesidad</strong></td>
+                        <td>Este término se aplica a aquellas enfermedades no transmisibles (ENT) y otros trastornos (ej. diabetes mellitus tipo 2, síndrome de apnea obstructiva del sueño (SAOS), enfermedad hepática grasa no alcohólica (EHNA/MASLD), ciertos tipos de cáncer, hipertensión arterial) que frecuentemente coexisten con la obesidad debido a una etiología compartida, mecanismos fisiopatológicos superpuestos o una interacción bidireccional demostrada.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Complicaciones de la Obesidad Clínica</strong></td>
+                        <td>Se refiere al desarrollo de disfunción orgánica severa, progresiva y, finalmente, al daño orgánico terminal (ej. infarto de miocardio, accidente cerebrovascular isquémico o hemorrágico, insuficiencia renal crónica terminal, insuficiencia cardíaca avanzada) que son consecuencia directa de la progresión y severidad de la obesidad clínica no controlada.</td>
+                    </tr>
+                </tbody>
+            </table>
+             <div class="diagram-container">
+                <h4>📈 Concepto Figura 4: Modelo Detallado de Obesidad Clínica y Preclínica</h4>
+                <div class="diagram-box" style="background-color: #e6f7ff;"><strong>Estado Inicial: ADIPOSIDAD EXCESIVA</strong><br>(Confirmada mediante antropometría avanzada o medición directa de grasa, más allá del simple IMC)</div>
+                <div class="diagram-arrow">↓</div>
+                <div style="display: flex; justify-content: space-around; align-items: stretch; margin-top: 15px; flex-wrap: wrap;">
+                    <div class="diagram-box" style="border: 2px solid #27ae60; flex-basis: 45%; margin-bottom:10px;">
+                        <h4><strong>OBESIDAD PRECLÍNICA</strong></h4>
+                        <em>Mecanismos Subyacentes:</em><br>
+                        • Adaptaciones celulares/tisulares iniciales.<br>
+                        • Cambios estructurales orgánicos mínimos o ausentes.<br>
+                        • Potencial disfunción leve del tejido adiposo.<br><br>
+                        <em>Manifestaciones Clínicas:</em><br>
+                        • Función orgánica general sustancialmente <strong>preservada</strong>.<br>
+                        • Ausencia de signos/síntomas mayores de enfermedad por obesidad.<br><br>
+                        <em>Implicaciones:</em><br>
+                        • Riesgo incrementado (variable) de progresión.<br>
+                        <em>Detección:</em> Antropometría, Historia Clínica detallada, revisión por sistemas.
+                    </div>
+                    <div class="diagram-arrow" style="flex-basis: 10%; font-size: 2.5em; line-height: 150px; writing-mode: vertical-rl; transform: rotate(180deg);">⇆ (Posible Transición) ⇆</div>
+                    <div class="diagram-box" style="border: 2px solid #e74c3c; flex-basis: 45%; margin-bottom:10px;">
+                        <h4><strong>OBESIDAD CLÍNICA</strong></h4>
+                        <em>Mecanismos Subyacentes:</em><br>
+                        • Alteración significativa de la función orgánica/sistémica.<br>
+                        • Cambios estructurales orgánicos evidentes (ej. fibrosis).<br>
+                        • Disfunción marcada del tejido adiposo.<br><br>
+                        <em>Manifestaciones Clínicas:</em><br>
+                        • Presencia de signos y síntomas específicos.<br>
+                        • Limitaciones funcionales en actividades diarias.<br>
+                        • Posible daño orgánico establecido y complicaciones.<br><br>
+                        <em>Implicaciones:</em><br>
+                        • Enfermedad activa que requiere intervención.<br>
+                        <em>Detección:</em> Lo anterior + pruebas diagnósticas específicas.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico">
+            <h2>🔍 Criterios Diagnósticos Detallados para la Obesidad Clínica</h2>
+            <p>El diagnóstico de la obesidad clínica propuesto por la Comisión es un proceso estructurado que va más allá de la simple categorización por IMC, buscando identificar la presencia real de enfermedad.</p>
+
+            <div class="flow-item">
+                <h3>Paso 1: Confirmación del Estado de Obesidad (Presencia de Adiposidad Excesiva)</h3>
+                <p>(Basado en Tabla 1, Declaraciones 14 y 17 del artículo original)</p>
+                <p>Este primer paso es crucial y busca asegurar que se está evaluando a un individuo con una cantidad de grasa corporal que excede los umbrales saludables.</p>
+                <ul class="custom-list">
+                    <li><strong>Rol del IMC:</strong> El IMC se considera una herramienta útil para el cribado poblacional y estudios epidemiológicos, pero <strong>no</strong> es adecuado como único criterio diagnóstico de la salud u obesidad a nivel individual debido a sus conocidas limitaciones (no diferencia masa grasa de magra, no indica distribución grasa).</li>
+                    <li><strong>Confirmación Necesaria:</strong> La confirmación clínica del "estado de obesidad" (es decir, la presencia de adiposidad excesiva o anormal) requiere una verificación más allá del IMC simple. Esto se logra mediante:
+                        <ul>
+                            <li><strong>Medición directa de la grasa corporal:</strong> Métodos como la absorciometría de rayos X de energía dual (DEXA), la pletismografía por desplazamiento de aire (BodPod) o el análisis de bioimpedancia eléctrica (BIA) son preferibles cuando están disponibles y validados.</li>
+                            <li><strong>Criterios antropométricos adicionales:</strong> En ausencia de mediciones directas, se debe utilizar al menos <strong>un</strong> criterio antropométrico adicional junto con el IMC (ej. circunferencia de cintura aumentada, relación cintura-cadera elevada, relación cintura-estatura elevada). O bien, al menos <strong>dos</strong> de estos criterios antropométricos, incluso si el IMC no alcanza el umbral tradicional de obesidad.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Validación y Puntos de Corte:</strong> Es fundamental utilizar métodos de medición validados y aplicar puntos de corte que sean apropiados para la edad, el sexo, la etnia y el país del individuo, ya que estos factores influyen significativamente en la relación entre las medidas antropométricas y el riesgo para la salud.</li>
+                    <li><strong>Casos de IMC Muy Elevado:</strong> En personas con un IMC sustancialmente alto (definido pragmáticamente como >40 kg/m²), la presencia de adiposidad excesiva puede asumirse de manera razonable sin necesidad de confirmación adicional compleja, aunque la evaluación de la salud sigue siendo indispensable.</li>
+                </ul>
+            </div>
+
+            <div class="flow-item">
+                <h3>Paso 2: Evaluación de la Presencia de Obesidad Clínica</h3>
+                <p>(Basado en Tabla 1, Declaración 16 y Tabla 2, Página 8 del artículo original)</p>
+                <p>Una vez que se ha confirmado objetivamente el estado de obesidad (adiposidad excesiva), el siguiente paso es determinar si esta adiposidad está causando un estado de enfermedad activa, es decir, "obesidad clínica". El diagnóstico de obesidad clínica requiere la <strong>confirmación del estado de obesidad (Paso 1) MÁS la presencia de uno o ambos</strong> de los siguientes criterios clínicos:</p>
+                <ol>
+                    <li>
+                        <strong>Evidencia de Función Reducida de Órganos o Tejidos Atribuible a la Obesidad:</strong>
+                        Esto implica la identificación de signos, síntomas y/o resultados anormales en pruebas diagnósticas que demuestren una alteración funcional en uno o más sistemas orgánicos o tejidos, y que esta disfunción pueda ser plausiblemente atribuida a los efectos directos del exceso de adiposidad (mecánicos, inflamatorios, metabólicos, etc.), tras excluir otras causas primarias obvias. (Ver tabla de ejemplos más abajo).
+                    </li>
+                    <li>
+                        <strong>Limitaciones Significativas y Ajustadas por Edad en las Actividades de la Vida Diaria (ABVD):</strong>
+                        Se refiere a una reducción sustancial en la capacidad del individuo para llevar a cabo actividades cotidianas normales, que refleje el impacto específico de la carga física o las alteraciones fisiológicas inducidas por la obesidad. Esto incluye limitaciones en la movilidad general (caminar, subir escaleras, levantarse de una silla) y/o en las actividades básicas de autocuidado como bañarse, vestirse, usar el inodoro, mantener la continencia y alimentarse. Estas limitaciones deben ser significativas para la edad del paciente y no explicables completamente por otras condiciones.
+                    </li>
+                </ol>
+            </div>
+
+            <h3>Tabla Resumida y Ampliada: Criterios Diagnósticos Específicos de Obesidad Clínica por Sistema (Adultos)</h3>
+            <p>Esta tabla ejemplifica cómo se puede manifestar la disfunción orgánica. Es crucial excluir otras causas antes de atribuir la disfunción a la obesidad.</p>
+            <table>
+                <thead><tr><th>Órgano/Sistema</th><th>Ejemplo de Criterio Diagnóstico Específico</th><th>Posible Mecanismo Relacionado con Obesidad</th></tr></thead>
+                <tbody>
+                    <tr><td>Sistema Nervioso Central (SNC)</td><td>Signos y síntomas de hipertensión intracraneal idiopática (pseudotumor cerebri): cefalea persistente, papiledema, alteraciones visuales.</td><td>Aumento de la presión del LCR, posiblemente relacionado con alteraciones hormonales o mecánicas.</td></tr>
+                    <tr><td>Vías Respiratorias Superiores</td><td>Apneas/hipopneas obstructivas del sueño confirmadas por polisomnografía (Índice Apnea-Hipopnea ≥5 eventos/hora con síntomas, o ≥15 sin ellos).</td><td>Estrechamiento de la vía aérea superior por depósitos de grasa faríngea, alteración de la función muscular.</td></tr>
+                    <tr><td>Sistema Respiratorio (Pulmonar)</td><td>Hipoventilación alveolar relacionada con la obesidad, disnea de esfuerzo desproporcionada, sibilancias, o reducción de volúmenes pulmonares (ej. VEF1, CVF) por restricción.</td><td>Reducción de la distensibilidad de la pared torácica y pulmonar por masa grasa, elevación diafragmática, inflamación crónica.</td></tr>
+                    <tr><td>Sistema Cardiovascular (Función Ventricular)</td><td>Insuficiencia cardíaca con fracción de eyección preservada (ICFEp) o reducida (ICFEr) donde la obesidad es un factor contribuyente principal.</td><td>Sobrecarga de volumen, hipertrofia ventricular, disfunción diastólica, fibrosis, lipotoxicidad cardíaca, inflamación.</td></tr>
+                    <tr><td>Sistema Cardiovascular (Ritmo)</td><td>Fibrilación auricular crónica o paroxística recurrente, especialmente si se asocia con factores de riesgo inducidos por obesidad.</td><td>Dilatación auricular, fibrosis, inflamación, disfunción autonómica, apnea del sueño.</td></tr>
+                    <tr><td>Sistema Cardiovascular (Vascular Periférico/Pulmonar)</td><td>Hipertensión arterial sistémica. Hipertensión arterial pulmonar (grupo 2 o 3 si está relacionado). Enfermedad tromboembólica venosa recurrente.</td><td>Resistencia a la insulina, activación del SRAA y simpático, disfunción endotelial, estado procoagulante.</td></tr>
+                    <tr><td>Metabolismo</td><td>Presencia de un clúster metabólico: Hiperglucemia (prediabetes o diabetes tipo 2), niveles elevados de triglicéridos, y niveles bajos de colesterol HDL.</td><td>Resistencia a la insulina sistémica y hepática, lipotoxicidad, producción alterada de adipocinas.</td></tr>
+                    <tr><td>Hígado</td><td>Enfermedad hepática grasa asociada a disfunción metabólica (MASLD, antes NAFLD) con evidencia de fibrosis significativa (ej. F2 o superior por elastografía o biopsia).</td><td>Acumulación ectópica de grasa, lipotoxicidad hepática, inflamación, estrés oxidativo, resistencia a la insulina.</td></tr>
+                    <tr><td>Riñón</td><td>Microalbuminuria persistente o proteinuria con Tasa de Filtración Glomerular estimada (TFGe) reducida o en progresivo descenso, atribuible a glomerulopatía por obesidad.</td><td>Hiperfiltración glomerular, estrés hemodinámico renal, inflamación, activación del SRAA, lipotoxicidad renal.</td></tr>
+                    <tr><td>Sistema Urinario</td><td>Incontinencia urinaria de esfuerzo o mixta recurrente/crónica, especialmente en mujeres.</td><td>Aumento de la presión intraabdominal, debilidad del suelo pélvico.</td></tr>
+                    <tr><td>Sistema Reproductor (Femenino)</td><td>Síndrome de ovario poliquístico (SOP), anovulación crónica, oligomenorrea/amenorrea, infertilidad relacionada con disfunción ovulatoria.</td><td>Resistencia a la insulina, hiperandrogenismo, alteración de la pulsatilidad de GnRH.</td></tr>
+                    <tr><td>Sistema Reproductor (Masculino)</td><td>Hipogonadismo hipogonadotrópico secundario, con testosterona baja y gonadotropinas inadecuadamente normales/bajas, disfunción eréctil.</td><td>Aromatización periférica de andrógenos a estrógenos en tejido adiposo, resistencia a la leptina, inflamación.</td></tr>
+                    <tr><td>Sistema Musculoesquelético</td><td>Osteoartritis severa sintomática (especialmente rodillas, caderas, manos), dolor crónico lumbar o en otras articulaciones de carga, con limitación funcional significativa.</td><td>Sobrecarga mecánica crónica, inflamación sistémica de bajo grado, alteración de adipocinas.</td></tr>
+                    <tr><td>Sistema Linfático</td><td>Linfedema secundario en miembros inferiores que causa dolor crónico, pesadez, limitación del rango de movimiento, infecciones recurrentes.</td><td>Compresión mecánica de los vasos linfáticos, alteración del drenaje linfático, inflamación.</td></tr>
+                    <tr><td>Limitaciones Funcionales Generales (ABVD)</td><td>Reducción sustancial, documentada y ajustada por edad, en la capacidad para realizar actividades de movilidad (caminar distancias comunitarias, subir tramos de escaleras) y/o actividades básicas de autocuidado (higiene personal, vestirse, uso del baño, continencia, preparación de alimentos).</td><td>Consecuencia global del exceso de peso, desacondicionamiento físico, dolor, disnea, y las disfunciones orgánicas específicas mencionadas.</td></tr>
+                </tbody>
+            </table>
+            <p><em>Nota: Esta tabla es una expansión ilustrativa. La evaluación clínica individualizada es esencial. Para criterios específicos en niños y adolescentes, referirse a la Tabla 2, Página 8 del artículo original.</em></p>
+             <div class="diagram-container">
+                <h4>🗺️ Concepto Detallado del Flujo Diagnóstico (Figuras 5 y 8 del artículo)</h4>
+                <div class="diagram-box"><strong>1. Cribado Inicial:</strong><br>Individuo presenta IMC en o por encima de umbrales específicos para edad, sexo, etnia.</div>
+                <div class="diagram-arrow">↓</div>
+                <div class="diagram-box"><strong>2. Confirmación Clínica de Adiposidad Anormal/Excesiva:</strong><br>
+                    • Antropometría adicional (ej. C. Cintura alta) <strong>Y/O</strong><br>
+                    • Medición Directa de Grasa Corporal (ej. DEXA).<br>
+                    <em>(Si NO se confirma adiposidad excesiva, NO es obesidad; ej. alta masa muscular).</em>
+                </div>
+                <div class="diagram-arrow">↓ (Si se confirma adiposidad excesiva → "Estado de Obesidad")</div>
+                <div class="diagram-box"><strong>3. Evaluación de Manifestaciones Clínicas (para diferenciar Ob. Preclínica de Clínica):</strong><br>
+                    Realizar historia clínica completa, examen físico exhaustivo, revisión por sistemas, laboratorios básicos (glucemia, perfil lipídico, función renal y hepática).
+                </div>
+                <div style="display: flex; justify-content: space-around; align-items: flex-start; margin-top: 15px; flex-wrap: wrap;">
+                    <div style="text-align: center; flex-basis: 45%; margin-bottom:10px;">
+                        <div class="diagram-arrow" style="font-size: 1.5em;">↙ Ausencia de criterios clínicos</div>
+                        <div class="diagram-box" style="background-color: #e6ffe6; border-color: #27ae60;">
+                            <strong>OBESIDAD PRECLÍNICA</strong><br>
+                            • Sin disfunción orgánica significativa atribuible a obesidad.<br>
+                            • Sin limitaciones sustanciales en ABVD por obesidad.
+                        </div>
+                    </div>
+                    <div style="text-align: center; flex-basis: 45%; margin-bottom:10px;">
+                        <div class="diagram-arrow" style="font-size: 1.5em;">Presencia de criterios clínicos ↘</div>
+                        <div class="diagram-box" style="background-color: #ffebee; border-color: #e74c3c;">
+                            <strong>OBESIDAD CLÍNICA</strong><br>
+                            • Evidencia de ≥1 disfunción orgánica/tisular por obesidad.<br>
+                            <strong>Y/O</strong><br>
+                            • Limitaciones significativas en ABVD por obesidad.
+                        </div>
+                    </div>
+                </div>
+                <div class="diagram-arrow">↓ (Si se diagnostica Obesidad Clínica)</div>
+                <div class="diagram-box"><strong>4. Caracterización Adicional y Plan de Manejo:</strong><br>
+                • Investigar severidad, complicaciones.<br>
+                • Excluir causas secundarias de obesidad si aplica.<br>
+                • Establecer plan de tratamiento individualizado.
+                </div>
+            </div>
+        </section>
+
+        <section id="fisiopatologia">
+            <h2>🧬 Fisiopatología Detallada: Cómo el Exceso de Adiposidad Induce Enfermedad</h2>
+            <p>El exceso de adiposidad no es un estado pasivo de almacenamiento de energía, sino un proceso activo que desencadena una cascada de alteraciones fisiopatológicas, conduciendo a la disfunción de múltiples órganos y tejidos y, finalmente, al desarrollo de la obesidad clínica.</p>
+            <ul class="custom-list pathophysiology-point">
+                <li><strong>Disfunción del Tejido Adiposo:</strong> Los adipocitos hipertróficos e hiperplásicos en la obesidad a menudo se vuelven disfuncionales. Esto incluye:
+                    <ul>
+                        <li><strong>Inflamación Crónica de Bajo Grado:</strong> El tejido adiposo se infiltra con macrófagos y otras células inmunes, liberando citoquinas proinflamatorias (TNF-α, IL-6) y reduciendo la secreción de adipocinas antiinflamatorias como la adiponectina.</li>
+                        <li><strong>Resistencia a la Insulina Adipocitaria:</strong> Disminuye la capacidad de la insulina para suprimir la lipólisis, llevando a un aumento en la liberación de ácidos grasos libres (AGL) a la circulación.</li>
+                        <li><strong>Fibrosis y Disoxia:</strong> La rápida expansión del tejido adiposo puede superar la capacidad de angiogénesis, resultando en hipoxia local, muerte celular y fibrosis, empeorando la disfunción.</li>
+                    </ul>
+                </li>
+                <li><strong>Lipotoxicidad (Acumulación de Grasa Ectópica):</strong> El exceso de AGL circulantes y la capacidad limitada del tejido adiposo subcutáneo para almacenar lípidos de forma segura llevan a su depósito en órganos no diseñados para ello, como:
+                    <ul>
+                        <li><strong>Hígado:</strong> Conduce a esteatosis hepática (EHNA/MASLD), resistencia a la insulina hepática, inflamación (esteatohepatitis o EHGNA/MASH) y fibrosis, pudiendo progresar a cirrosis.</li>
+                        <li><strong>Músculo Esquelético:</strong> Causa resistencia a la insulina muscular, afectando la captación de glucosa.</li>
+                        <li><strong>Páncreas (Células β):</strong> La lipotoxicidad puede dañar las células β, disminuyendo la secreción de insulina y contribuyendo al desarrollo de diabetes tipo 2.</li>
+                        <li><strong>Corazón:</strong> Puede causar disfunción diastólica y sistólica.</li>
+                    </ul>
+                </li>
+                <li><strong>Alteraciones Endocrinas y Metabólicas Sistémicas:</strong>
+                    <ul>
+                        <li><strong>Resistencia a la Insulina Sistémica e Hiperinsulinemia Compensatoria:</strong> Consecuencia de la resistencia en hígado, músculo y tejido adiposo. La hiperinsulinemia crónica tiene efectos mitogénicos y proaterogénicos.</li>
+                        <li><strong>Dislipidemia Aterogénica:</strong> Caracterizada por triglicéridos elevados, HDL bajo, y partículas de LDL pequeñas y densas.</li>
+                        <li><strong>Activación del Sistema Renina-Angiotensina-Aldosterona (SRAA) y Sistema Nervioso Simpático:</strong> Contribuyen a la hipertensión arterial y al daño cardiovascular.</li>
+                        <li><strong>Alteraciones en Hormonas Sexuales:</strong> Aumento de la aromatización periférica de andrógenos a estrógenos en el tejido adiposo, contribuyendo a hipogonadismo en hombres y alteraciones menstruales/SOP en mujeres.</li>
+                        <li><strong>Desregulación del Apetito y Gasto Energético:</strong> Resistencia a hormonas como la leptina e insulina a nivel central, alterando la homeostasis energética.</li>
+                    </ul>
+                </li>
+                <li><strong>Estrés Mecánico y Hemodinámico:</strong>
+                    <ul>
+                        <li><strong>Sobrecarga Articular:</strong> El exceso de peso acelera el desgaste de las articulaciones de carga (rodillas, caderas), conduciendo a osteoartritis.</li>
+                        <li><strong>Compresión de Vías Aéreas:</strong> Depósitos de grasa en el cuello y faringe contribuyen a la apnea obstructiva del sueño.</li>
+                        <li><strong>Aumento del Gasto Cardíaco y Volumen Sanguíneo:</strong> Para perfundir la masa corporal aumentada, lo que impone una sobrecarga crónica al corazón.</li>
+                        <li><strong>Presión Intraabdominal Aumentada:</strong> Puede afectar la función respiratoria (restricción pulmonar), contribuir a la incontinencia urinaria y al reflujo gastroesofágico.</li>
+                    </ul>
+                </li>
+                <li><strong>Disfunción Endotelial y Estado Procoagulante:</strong> La inflamación crónica, la resistencia a la insulina y las adipocinas alteradas promueven la disfunción del endotelio vascular, reduciendo la biodisponibilidad de óxido nítrico y favoreciendo un estado protrombótico.</li>
+            </ul>
+            <div class="diagram-container">
+                <h4>🔗 Concepto Detallado de la Figura 3: Cascada Fisiopatológica de la Obesidad Clínica</h4>
+                <div class="diagram-box" style="background-color: #fff9c4;"><strong>ETIOLOGÍA INICIAL</strong><br>(Factores Genéticos, Ambientales, Conductuales, Psicológicos, Socioeconómicos)</div>
+                <div class="diagram-arrow">↓</div>
+                <div class="diagram-box"><strong>Expansión y Disfunción del Tejido Adiposo</strong><br>• Hipertrofia/hiperplasia adipocitaria<br>• Inflamación local (macrófagos, citoquinas ↑)<br>• Resistencia a la insulina adipocitaria<br>• Fibrosis, hipoxia</div>
+                <div class="diagram-arrow">↓</div>
+                <div class="diagram-box" style="display:flex; flex-direction:column; align-items:center;">
+                    <strong>MECANISMOS FISIOPATOLÓGICOS SISTÉMICOS</strong>
+                    <div style="display:flex; flex-wrap:wrap; justify-content:space-around; width:100%;">
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>1. Lipotoxicidad</strong><br>(Grasa ectópica en hígado, músculo, páncreas, corazón)</div>
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>2. Inflamación Sistémica</strong><br>(Citoquinas circulantes ↑, Proteína C Reactiva ↑)</div>
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>3. Resistencia a la Insulina Sistémica e Hiperinsulinemia</strong></div>
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>4. Disfunción Endotelial y Estrés Oxidativo</strong></div>
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>5. Estrés Mecánico/Físico</strong><br>(Sobrecarga articular, compresión vías aéreas, ↑ presión intraabdominal)</div>
+                        <div class="diagram-box" style="flex-basis:45%; margin:5px; background-color:#e3f2fd;"><strong>6. Alteraciones Neurohormonales</strong><br>(Activación SNS, SRAA, resistencia a leptina)</div>
+                    </div>
+                </div>
+                <div class="diagram-arrow">↓</div>
+                <div class="diagram-box" style="background-color: #ffcdd2;"><strong>MANIFESTACIONES DE OBESIDAD CLÍNICA (DISFUNCIÓN ORGÁNICA Y SINTOMATOLOGÍA)</strong><br>• Cardiovascular (HTA, IC, FA)<br>• Metabólica (Diabetes T2, Dislipidemia)<br>• Hepática (MASLD/MASH)<br>• Respiratoria (SAOS, Hipoventilación)<br>• Musculoesquelética (Osteoartritis)<br>• Renal (ERC)<br>• Reproductiva (SOP, Hipogonadismo)<br>• Limitaciones funcionales / Calidad de vida ↓</div>
+            </div>
+             <p>Estos mecanismos interactúan y se potencian entre sí, creando un círculo vicioso que perpetúa y agrava el estado de enfermedad en la obesidad clínica. La susceptibilidad individual a desarrollar disfunciones específicas varía considerablemente debido a factores genéticos y ambientales.</p>
+        </section>
+
+        <section id="manejo">
+            <h2>🛡️ Principios de Manejo: Enfoque Personalizado y Basado en Evidencia</h2>
+            <p>La Comisión enfatiza que la distinción entre obesidad preclínica y clínica debe guiar las estrategias de manejo, con objetivos y enfoques terapéuticos diferenciados y adaptados al estado de salud del individuo.</p>
+            <div class="diagram-container">
+                <h4>🛠️ Concepto Detallado Figura 9: Objetivos y Estrategias de Tratamiento Diferenciados</h4>
+                <div style="display: flex; justify-content: space-around; align-items: flex-start; flex-wrap: wrap; margin-bottom: 15px;">
+                    <div class="diagram-box" style="border: 3px solid #2ecc71; background-color: #f0fff0; flex-basis: 48%; margin-bottom: 15px;">
+                        <h3><strong>MANEJO DE LA OBESIDAD PRECLÍNICA</strong></h3>
+                        <p><strong>🎯 Objetivo Primario:</strong> <strong>Reducción del Riesgo.</strong> Prevenir la progresión a obesidad clínica y/o el desarrollo de enfermedades no transmisibles (ENT) relacionadas con la obesidad.</p>
+                        <ul class="custom-list management-point">
+                            <li><strong>Monitorización y Asesoramiento:</strong> Evaluación periódica del estado de salud, incluyendo marcadores de riesgo. Asesoramiento continuo sobre estilos de vida saludables (nutrición, actividad física, manejo del estrés).</li>
+                            <li><strong>Intervenciones Profilácticas (Individualizadas):</strong>
+                                <ul>
+                                    <li><strong>Bajo Riesgo Individual:</strong> Generalmente, solo monitorización y asesoramiento.</li>
+                                    <li><strong>Alto Riesgo Individual:</strong> (Considerando factores como severidad de la adiposidad, historia familiar, etnia, presencia de otros factores de riesgo cardiovascular, etc.). Pueden considerarse intervenciones más activas:
+                                        <ul>
+                                            <li>Programas estructurados de modificación del estilo de vida.</li>
+                                            <li>Tratamiento farmacológico antiobesidad, si está indicado para la prevención en subgrupos específicos.</li>
+                                            <li>Cirugía bariátrica/metabólica en circunstancias muy seleccionadas de alto riesgo o para facilitar el tratamiento de otras condiciones (ej. preparación para trasplante, manejo de diabetes tipo 2 de difícil control incluso en estado preclínico de obesidad).</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><strong>Resultados Esperados:</strong> Mantenimiento de la salud, no progresión a enfermedad, mejora de factores de riesgo.</li>
+                        </ul>
+                    </div>
+                    <div class="diagram-box" style="border: 3px solid #e74c3c; background-color: #fff0f0; flex-basis: 48%; margin-bottom: 15px;">
+                        <h3><strong>MANEJO DE LA OBESIDAD CLÍNICA</strong></h3>
+                        <p><strong>🎯 Objetivo Primario:</strong> <strong>Intervención Terapéutica.</strong> Mejorar o lograr la remisión de las manifestaciones clínicas existentes, prevenir la progresión a daño orgánico mayor y complicaciones, y mejorar la calidad de vida.</p>
+                        <ul class="custom-list management-point">
+                            <li><strong>Cuidado Integral y Multidisciplinario:</strong> Implica un equipo de profesionales (médicos, nutricionistas, psicólogos, fisioterapeutas, etc.).</li>
+                            <li><strong>Tratamiento Basado en Evidencia:</strong>
+                                <ul>
+                                    <li><strong>Modificación Intensiva del Estilo de Vida:</strong> Dieta terapéutica, programa de ejercicio adaptado, terapia conductual.</li>
+                                    <li><strong>Tratamiento Farmacológico:</strong> Uso de medicamentos antiobesidad aprobados, seleccionados según el perfil del paciente y las manifestaciones clínicas.</li>
+                                    <li><strong>Cirugía Bariátrica y Metabólica:</strong> Considerada una opción efectiva y duradera para individuos con obesidad clínica severa o aquellos con obesidad clínica y comorbilidades significativas no controladas por otros medios.</li>
+                                    <li><strong>Manejo de Manifestaciones Específicas:</strong> Tratamiento dirigido a las disfunciones orgánicas identificadas (ej. CPAP para SAOS, antihipertensivos, estatinas).</li>
+                                </ul>
+                            </li>
+                            <li><strong>Resultados Esperados:</strong> Mejora objetiva de signos/síntomas de disfunción orgánica, mejora en la capacidad funcional (ABVD), posible remisión de manifestaciones, prevención de complicaciones, mejora de calidad de vida. <em>La pérdida de peso es un medio para estos fines, no el fin último en sí mismo.</em></li>
+                        </ul>
+                    </div>
+                </div>
+                <p style="font-style: italic; color: #555;">Según el Panel 7 (Página 31 del artículo original), el éxito del tratamiento de la obesidad clínica no se mide solo por la cantidad de peso perdido, sino fundamentalmente por la mejora o remisión de las manifestaciones clínicas específicas que definen la enfermedad en ese individuo.</p>
+            </div>
+        </section>
+
+        <section id="estigma">
+            <h2>🚫 Estigma y Sesgo Basados en el Peso: Una Barrera Fundamental</h2>
+            <p>La Comisión dedica una atención considerable al impacto profundamente negativo del estigma y el sesgo relacionados con el peso, identificándolos como barreras cruciales para la prevención y el tratamiento efectivos de la obesidad.</p>
+            <ul class="custom-list stigma-list">
+                <li><strong>Prevalencia y Fuentes:</strong> El estigma es omnipresente, manifestándose en la sociedad, los medios de comunicación, los entornos laborales e incluso, de manera preocupante, dentro del propio sistema de atención médica por parte de algunos profesionales de la salud.</li>
+                <li><strong>Impacto en la Salud Física y Mental:</strong> La exposición al estigma y al sesgo puede:
+                    <ul>
+                        <li>Causar considerable angustia psicológica: depresión, ansiedad, baja autoestima, imagen corporal negativa.</li>
+                        <li>Desencadenar o exacerbar comportamientos alimentarios no saludables: atracones, alimentación emocional, restricción seguida de descontrol.</li>
+                        <li>Fomentar la evitación de la actividad física y promover conductas sedentarias.</li>
+                        <li>Conducir paradójicamente a un mayor aumento de peso y peores resultados cardiometabólicos.</li>
+                    </ul>
+                </li>
+                <li><strong>Barreras para la Atención:</strong> Las experiencias negativas o el temor al juicio pueden disuadir a las personas con obesidad de buscar atención médica oportuna o de adherirse a los planes de tratamiento. Esto perpetúa un ciclo de enfermedad no tratada y empeoramiento de la salud.</li>
+                <li><strong>Internalización del Estigma:</strong> Las personas con obesidad pueden llegar a interiorizar las actitudes negativas de la sociedad, culpándose a sí mismas por su condición, lo que mina la autoeficacia y la motivación para el cambio.</li>
+                <li><strong>Necesidad de Intervención:</strong> La Comisión subraya la urgencia de:
+                    <ul>
+                        <li><strong>Educar a los profesionales de la salud:</strong> Para que comprendan la obesidad como una enfermedad compleja y multifactorial, y para que adopten un lenguaje y un trato respetuoso y libre de prejuicios.</li>
+                        <li><strong>Educar al público y a los medios:</strong> Para desafiar las narrativas simplistas que culpan exclusivamente al individuo y para promover una comprensión más matizada de las causas de la obesidad.</li>
+                        <li><strong>Cambiar el Enfoque Narrativo:</strong> Reconocer la obesidad clínica como una condición médica legítima, y no como una simple falta de fuerza de voluntad o una elección de estilo de vida, es un paso fundamental para desmantelar el estigma.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Abordar el estigma no es solo una cuestión de justicia social, sino una necesidad imperativa para mejorar la salud y el bienestar de las personas que viven con obesidad y para aumentar la efectividad de las intervenciones de salud pública.</p>
+        </section>
+
+        <section id="recomendaciones">
+            <h2>💡 Recomendaciones Clave Detalladas de la Comisión</h2>
+            <p>(Basadas en los Paneles 2, 7 y 8 del artículo original)</p>
+            <h3>Para Profesionales Clínicos:</h3>
+            <ul class="custom-list recommendation-list">
+                <li><strong>Diagnóstico Preciso de Adiposidad:</strong> No depender exclusivamente del IMC. Confirmar el exceso de adiposidad utilizando mediciones directas de grasa corporal o, como mínimo, criterios antropométricos adicionales (ej. circunferencia de cintura) con puntos de corte ajustados por edad, sexo y etnia (excepto en IMC >40 kg/m²).</li>
+                <li><strong>Evaluación Sistemática de Obesidad Clínica:</strong> En todos los individuos con estado de obesidad confirmado, investigar activamente la presencia de signos, síntomas o resultados de pruebas que indiquen disfunción orgánica/tisular atribuible a la obesidad, así como limitaciones significativas en las actividades de la vida diaria.</li>
+                <li><strong>Tratamiento Individualizado y Basado en Evidencia para Obesidad Clínica:</strong> Ofrecer acceso oportuno a un plan de manejo integral que puede incluir modificaciones del estilo de vida, farmacoterapia, y/o cirugía bariátrica/metabólica, con el objetivo principal de mejorar o remitir las manifestaciones clínicas y prevenir complicaciones.</li>
+                <li><strong>Manejo Proactivo de la Obesidad Preclínica:</strong> Proporcionar asesoramiento continuo sobre estilos de vida saludables, monitorizar el estado de salud y los factores de riesgo, e implementar intervenciones de reducción de riesgo más intensivas (incluyendo farmacoterapia o cirugía en casos seleccionados) cuando el perfil de riesgo individual lo justifique.</li>
+                <li><strong>Comunicación Empática y Libre de Estigma:</strong> Utilizar un lenguaje centrado en la persona, evitar la culpa y reconocer la complejidad de la obesidad.</li>
+            </ul>
+            <h3>Para Responsables Políticos y Autoridades Sanitarias:</h3>
+            <ul class="custom-list recommendation-list">
+                <li><strong>Garantizar Acceso Equitativo a la Atención:</strong> Asegurar que los tratamientos basados en evidencia para la obesidad clínica (incluyendo fármacos y cirugía cuando estén indicados) sean accesibles y asequibles para todas las personas que los necesiten, independientemente de su estatus socioeconómico o ubicación geográfica.</li>
+                <li><strong>Fortalecer la Prevención y el Diagnóstico Temprano:</strong> Apoyar el acceso a servicios de evaluación diagnóstica para la obesidad preclínica y clínica, así como a programas de monitorización y prevención.</li>
+                <li><strong>Basar las Políticas en Evidencia Científica:</strong> Desarrollar e implementar estrategias de salud pública para la prevención y el manejo de la obesidad que se fundamenten en la mejor evidencia científica disponible, evitando suposiciones no probadas que atribuyen la responsabilidad únicamente al individuo.</li>
+                <li><strong>Combatir el Estigma a Nivel Sistémico:</strong> Promover campañas de concienciación pública y programas de formación para profesionales de la salud y educadores con el fin de erradicar el sesgo y el estigma asociados al peso.</li>
+                <li><strong>Integración de Criterios Diagnósticos:</strong> Fomentar la adopción de los criterios diagnósticos de obesidad clínica en las guías de práctica clínica y en los sistemas de evaluación de la atención sanitaria.</li>
+                <li><strong>Resultados Clínicos Relevantes en Ensayos:</strong> Abogar por que la mejora o remisión de las manifestaciones de la obesidad clínica, y no solo la pérdida de peso, sean considerados resultados primarios en los ensayos clínicos de nuevas intervenciones antiobesidad.</li>
+            </ul>
+            <h3>Para la Agenda de Investigación Futura:</h3>
+            <ul class="custom-list recommendation-list">
+                <li><strong>Epidemiología de la Obesidad Clínica:</strong> Determinar con precisión la prevalencia, incidencia y tasas de progresión de la obesidad preclínica a clínica en diversas poblaciones.</li>
+                <li><strong>Sistemas de Estadificación y Pronóstico:</strong> Desarrollar y validar sistemas de estadificación para la obesidad clínica que puedan predecir el riesgo de complicaciones, la respuesta al tratamiento y la mortalidad, para guiar la priorización terapéutica.</li>
+                <li><strong>Biomarcadores y Herramientas Diagnósticas Mejoradas:</strong> Identificar y validar nuevos biomarcadores (sanguíneos, de imagen, funcionales) y criterios antropométricos que mejoren la precisión, sensibilidad y especificidad del diagnóstico de la obesidad clínica y su pronóstico.</li>
+                <li><strong>Mecanismos Fisiopatológicos:</strong> Profundizar en la comprensión de los mecanismos moleculares y celulares mediante los cuales el exceso de adiposidad conduce a la disfunción orgánica específica y cómo varía entre individuos.
+                <li><strong>Remisión y Cura Potencial:</strong> Establecer criterios claros para la remisión y la potencial "cura" (entendida como remisión sostenida a largo plazo sin tratamiento activo) de la obesidad clínica, e investigar los factores que predicen estos resultados.</li>
+                <li><strong>Impacto de las Intervenciones:</strong> Evaluar la efectividad de diferentes intervenciones (estilo de vida, farmacológicas, quirúrgicas) no solo en la pérdida de peso, sino en la mejora o remisión de las manifestaciones específicas de la obesidad clínica.</li>
+                 <li><strong>Investigación sobre Estigma:</strong> Desarrollar y evaluar intervenciones efectivas para reducir el estigma por peso a nivel individual, comunitario y sistémico.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>Comisión de The Lancet Diabetes & Endocrinology: Definición y criterios diagnósticos de la obesidad clínica</strong></p>
+        <p>Autor del resumen: Jeysson Eliseo Mejía Guzmán</p>
+    </footer>
+
+</body>
+</html>
